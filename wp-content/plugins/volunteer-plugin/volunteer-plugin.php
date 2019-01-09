@@ -27,7 +27,6 @@ function jp_rest_post_editor_form( ) {
             <div class="wrapper-button">
                 <button type="submit" class="btn">Submit</button>
             </div>
-            <p class="test" style="cursor: pointer"> Test </p>
         </form>
 
     ';
