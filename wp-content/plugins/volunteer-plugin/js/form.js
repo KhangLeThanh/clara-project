@@ -2,7 +2,7 @@ jQuery(document).ready(function() {
     console.log("hi");
     jQuery( "#myForm" ).submit(function( event ) {
         event.preventDefault(); 
-        $.ajax({
+        jQuery.ajax({
           url : "https://novice.clara.fi/api/2/organization/b698c430416bbafeb99414b5bde494ca/applicants.json", // end point
           type : "POST",
           dataType: 'json',
@@ -11,10 +11,10 @@ jQuery(document).ready(function() {
           },
           
           data : JSON.stringify({ 
-            first_name : $('#fname').val().trim(),
-            last_name : $('#lname').val().trim(),
-            email : $('#email').val().trim(),
-            phone : $('#phone').val().trim(),
+            first_name : jQuery('#fname').val().trim(),
+            last_name : jQuery('#lname').val().trim(),
+            email : jQuery('#email').val().trim(),
+            phone : jQuery('#phone').val().trim(),
             service_id: 110062,
             consents: 14355
           }),
