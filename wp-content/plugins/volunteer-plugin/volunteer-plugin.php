@@ -37,8 +37,10 @@ add_shortcode( 'volunteer-plugin', 'cf_shortcode');
 add_action('wp_enqueue_scripts','my_theme_scripts_function');
 
 function my_theme_scripts_function() {
+    wp_enqueue_script( 'bootstrap', plugin_dir_url(__FILE__) . '/js/bootstrap.min.js', array('jquery'), '20120206', true );
     wp_enqueue_script( 'validation-script', plugin_dir_url( __FILE__ ) . '/js/validation.js', array('jquery'), true );
     wp_enqueue_script( 'form-script', plugin_dir_url( __FILE__ ) . '/js/form.js', array('jquery'), true );
+    wp_enqueue_style( 'bootstrap', plugin_dir_url(__FILE__) . '/css/bootstrap.css', array(), 20141119 );
     wp_enqueue_style( 'form-style', plugin_dir_url( __FILE__ ) . '/css/base.css', array(), 20141119 );
 
   
